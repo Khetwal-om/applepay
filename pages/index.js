@@ -32,10 +32,43 @@ const CheckoutForm = () => {
     });
     pr.canMakePayment().then((result) => {
       if (result) {
+        console.log(pr);
         // display button
         setPaymentRequest(pr);
       }
     });
+
+    // pr.on('paymentmethod', async (e) => {
+    //   // create payment intent on the server
+    //   const { clientSecret } = await fetch('/charge', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify({
+    //       paymentMethodType: 'card',
+    //       currency: 'usd'
+    //     })
+    //   }).then((r) => r.json());
+    //   // confirm the payment intent on the client
+    //   const { error, paymentIntent } = await stripe.confirmCardPayment(
+    //     clientSecret,
+    //     {
+    //       payment_method: e.paymentMethod.id
+    //     },
+    //     {
+    //       handleActions: false
+    //     }
+    //   );
+    //   if (error) {
+    //     e.complete('fail');
+    //     return;
+    //   }
+    //   e.complete('success');
+    //   if (paymentIntent.status == 'requires_action') {
+    //     stripe.confirmCardPayment(clientSecret);
+    //   }
+    // });
   }, [stripe, elements]);
 
   const handleSubmit = async (event) => {
@@ -74,7 +107,7 @@ const CheckoutForm = () => {
   };
 
   return (
-    <>
+    <div>
       <div>
         {paymentRequest && (
           <PaymentRequestButtonElement options={paymentRequest} />
@@ -90,7 +123,7 @@ const CheckoutForm = () => {
           Pay
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

@@ -95,7 +95,7 @@ const CheckoutForm = () => {
 };
 
 const stripePromise = loadStripe(
-  'pk_test_51IIaCjCLRibWvXdYzGXdzQlzFnf4GUAeh6mDrW0giL4coCou59XUHqYMSNIshUVCjkZjkOoWqBmAjPSnXyVhpMeE00YMkm58V3'
+  'pk_test_51J7EbKKPb9py8ci96XGzWrm0kFq3uacGobMuk9xY4TvT74jNyXXgThePKE7SLeQMhDc6CksyaMJOPX4Ie9JnjgLB00kYyNGrEZ'
 );
 
 const index = () => {

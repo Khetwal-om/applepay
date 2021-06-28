@@ -1,6 +1,6 @@
 import Stripe from 'stripe';
 const stripe = new Stripe(
-  'sk_test_51IIaCjCLRibWvXdYTlBTjxE2S5uKCLzsJl7Si4fK19KbQFCfllAb0HhslSbp3N9drq8VcwM2UGwWS7tLoquOOT1C00l9rBsjcC'
+  'sk_test_51J7EbKKPb9py8ci93fVtAfqrIDMpz50CAzKiG1zQpMOi6XBvf7ONrvBUmnOifLyZXgjreqM3gUQBRSK6AmURSvwS00y7WbThYo'
 );
 
 export default async (req, res) => {

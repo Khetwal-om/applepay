@@ -21,8 +21,8 @@ const CheckoutForm = () => {
       return;
     }
     const pr = stripe.paymentRequest({
-      currency: 'inr',
-      country: 'IN',
+      currency: 'usd',
+      country: 'US',
       requestPayerEmail: true,
       requestPayerName: true,
       total: {

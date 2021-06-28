@@ -9,7 +9,7 @@ export default async (req, res) => {
   try {
     const payment = await stripe.paymentIntents.create({
       amount,
-      currency: 'INR',
+      currency: 'USD',
       description: 'Delicious empanadas',
       payment_method: id,
       confirm: true

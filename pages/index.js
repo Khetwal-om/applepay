@@ -34,7 +34,7 @@ const CheckoutForm = () => {
   }, [stripe]);
 
   if (paymentRequest) {
-    return <PaymentRequestButtonElement options={{ paymentRequest }} />;
+    return <PaymentRequestButtonElement onClick={()=>console.log('clicking')} options={{ paymentRequest }} />;
   }
 
   // Use a traditional checkout form.
